@@ -1,3 +1,5 @@
+## python: 1x, cython: 2731x, Cython improved algorithm: 120,400x
+
 #The Copout way:
 
 def sum(n):
