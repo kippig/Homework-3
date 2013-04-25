@@ -17,4 +17,4 @@ def sum(int n):
 
 %timeit sum(10000)
 
-625 loops, best of 3: 12.1 µs per loop
+625 loops, best of 3: 10.8 µs per loop
