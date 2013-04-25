@@ -7,18 +7,18 @@ def sum(n):
     for i in range(1,n+1):
         s += i*i
     return s
-%timeit sum(10000)
+timeit('sum(10000)')
 
 ##25 loops, best of 3: 29.5 ms per loop
 
 %cython
-def sum(int n):
+def sum1(int n):
     cdef int i, s = 0
     for i in range(1,n+11):
         s += i*i
     return int(s)
 
-%timeit sum(10000)
+%timeit('sum1(10000)')
 
 ##625 loops, best of 3: 10.8 µs per loop
 
@@ -29,6 +29,6 @@ def fastsum(int n):
     cdef int i = n*(n+1)*(2*n+1)/6
     return i
 
-%timeit sum(10000)
+%timeit('fastsum(10000)')
 
 625 loops, best of 3: 245 ns per loop
