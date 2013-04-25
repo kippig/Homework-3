@@ -1,0 +1,20 @@
+def sum(n):
+    s = 0
+    for i in range(1,n+1):
+        s += i*i
+    return s
+%timeit sum(10000)
+
+25 loops, best of 3: 29.5 ms per loop
+
+%cython
+
+def sum(int n):
+    cdef int i, s = 0
+    for i in range(1,n+11):
+        s += i*i
+    return int(s)
+
+%timeit sum(10000)
+
+625 loops, best of 3: 12.1 µs per loop
