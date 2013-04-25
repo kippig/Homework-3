@@ -18,7 +18,7 @@ def prime_list(n):
             pass
     return s
 
-%timeit prime_list(10000)
+timeit('prime_list(10000)')
 
 #5 loops, best of 3: 125 ms per loop
 
@@ -42,6 +42,6 @@ def prime_list1(int n):
             pass
     return s
 
-%timeit prime_list1(10000)
+timeit('prime_list1(10000)')
 
 ##125 loops, best of 3: 2.61 ms per loop
