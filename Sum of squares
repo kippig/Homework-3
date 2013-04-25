@@ -1,4 +1,4 @@
-The Copout way:
+#The Copout way:
 
 def sum(n):
     s = 0
@@ -7,7 +7,7 @@ def sum(n):
     return s
 %timeit sum(10000)
 
-25 loops, best of 3: 29.5 ms per loop
+##25 loops, best of 3: 29.5 ms per loop
 
 %cython
 def sum(int n):
@@ -18,9 +18,9 @@ def sum(int n):
 
 %timeit sum(10000)
 
-625 loops, best of 3: 10.8 µs per loop
+##625 loops, best of 3: 10.8 µs per loop
 
-Inductive Sum of Squares Formula:
+#Inductive Sum of Squares Formula:
 
 %cython
 def fastsum(int n):
